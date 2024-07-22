@@ -1,0 +1,10 @@
+/* src/components/Header.css */
+.header-title {
+    color: black; /* Color predeterminado */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+  }
+  
+  .header-title:hover {
+    color: red; /* Color al pasar el cursor */
+  }
+  

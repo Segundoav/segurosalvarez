@@ -17,11 +17,11 @@ const Header = () => {
         <span className="text-2xl font-bold">Seguros Alvarez</span>
       </div>
       <nav className="hidden md:flex space-x-4">
-        <a href="#home" className="hover:underline">Home</a>
+        <a href="#home" className="hover:underline">Portada</a>
         <a href="#portfolio" className="hover:underline">Portafolio</a>
-        <a href="#about" className="hover:underline">About Me</a>
-        <a href="#testimonials" className="hover:underline">Testimonial</a>
-        <a href="#contact" className="hover:underline">Contact Me</a>
+        <a href="#about" className="hover:underline">Acerca de mi</a>
+        <a href="#testimonials" className="hover:underline">Testimonios</a>
+        <a href="#contact" className="hover:underline">Contactanos</a>
       </nav>
       <div className="md:hidden">
         <button onClick={toggleMenu} className="menu-icon"> {/* Añadir la clase aquí */}
@@ -30,7 +30,7 @@ const Header = () => {
       </div>
       {isOpen && (
         <div className="absolute top-16 right-0 bg-blue-600 p-4 flex flex-col space-y-4 z-50">
-          <a href="#home" onClick={toggleMenu} className="hover:underline">Home</a>
+          <a href="#home" onClick={toggleMenu} className="hover:underline">Portada</a>
           <a href="#portfolio" onClick={toggleMenu} className="hover:underline">Portafolio</a>
           <a href="#about" onClick={toggleMenu} className="hover:underline">About Me</a>
           <a href="#testimonials" onClick={toggleMenu} className="hover:underline">Testimonial</a>

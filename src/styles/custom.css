@@ -1,27 +1,52 @@
-/* styles/custom.css */
-@media (max-width: 768px) {
-    .absolute-menu {
-      position: absolute;
-      top: 4rem; /* Ajusta según la altura de tu header */
-      left: 0;
-      right: 0;
-      background-color: #2563eb; /* bg-blue-600 */
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      z-index: 50; /* Asegura que el menú esté por encima de otros elementos */
-    }
+/* src/styles/custom.css */
+
+.home-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    text-align: center;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+  }
   
-    .absolute-menu a {
-      margin: 0.5rem 0;
-      color: white;
-      text-decoration: none;
-    }
+  .home-content {
+    margin-bottom: 2rem;
+  }
   
-    .home-section {
-      position: relative;
-      z-index: 10; /* Asegura que otros elementos estén debajo del menú */
+  .carousel {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden; /* Oculta el desbordamiento de las imágenes */
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    width: 400%; /* Ajusta el ancho según el número de imágenes */
+    animation: rotate 12s linear infinite; /* Aumenta la duración total de la animación */
+  }
+  
+  .carousel-image {
+    width: 25%; /* Ajusta el ancho para que se ajuste al contenedor */
+    transition: transform 0.3s ease;
+  }
+  
+  .carousel-image:hover {
+    transform: scale(1.1); /* Efecto de aumento en hover */
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
     }
   }
+  
+  
   

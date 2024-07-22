@@ -1,15 +1,26 @@
+// src/components/Home.jsx
 import React from 'react';
-import homeImage from '../assets/portada.jpg'; // Asegúrate de que este archivo existe
+import '../styles/custom.css';
+import efecto1 from '../assets/efecto1.png';
+import efecto2 from '../assets/efecto2.png';
+import efecto3 from '../assets/efecto3.png';
+import efecto4 from '../assets/efecto4.png';
+
+const images = [efecto1, efecto2, efecto3, efecto4];
 
 const Home = () => {
   return (
-    <section id="home" className="home-section mt-16 md:mt-0 p-8 bg-gray-100 flex flex-col md:flex-row items-center">
-      <div className="md:w-1/2 md:pr-8">
-        <h1 className="text-3xl font-bold mb-4">Bienvenidos a "Seguros Alvarez"</h1>
-        <p className="mb-4 ">"Ofrecemos los mejores seguros para ti y tu familia. Confía en nosotros para proteger lo que más valoras."</p>
+    <section id="home" className="home-section">
+      <div className="home-content">
+        <h1 className="text-5xl font-bold mb-4">Corredor de seguros</h1>
+        <p className="text-lg">"Nuestra mayor preocupación es que siempre estés protegido"</p>
       </div>
-      <div className="md:w-1/2">
-        <img src={homeImage} alt="Home" className="rounded-lg shadow-lg" />
+      <div className="carousel">
+        <div className="carousel-wrapper">
+          {images.map((image, index) => (
+            <img key={index} src={image} alt={`Effect ${index + 1}`} className="carousel-image" />
+          ))}
+        </div>
       </div>
     </section>
   );
