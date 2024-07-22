@@ -1,0 +1,27 @@
+/* styles/custom.css */
+@media (max-width: 768px) {
+    .absolute-menu {
+      position: absolute;
+      top: 4rem; /* Ajusta según la altura de tu header */
+      left: 0;
+      right: 0;
+      background-color: #2563eb; /* bg-blue-600 */
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 50; /* Asegura que el menú esté por encima de otros elementos */
+    }
+  
+    .absolute-menu a {
+      margin: 0.5rem 0;
+      color: white;
+      text-decoration: none;
+    }
+  
+    .home-section {
+      position: relative;
+      z-index: 10; /* Asegura que otros elementos estén debajo del menú */
+    }
+  }
+  
